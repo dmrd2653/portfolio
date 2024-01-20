@@ -35,7 +35,7 @@ const requestListener = function (req, res) {
       res.end(err);
       return;
     });
-  } else if (req.url.indexOf('.html' != -1)) {
+  } else if (req.url === '/' || req.url.indexOf('.html') != -1) {
     fs.readFile(__dirname + "/public/index.html")
         .then(contents => {
           html = contents;
@@ -48,6 +48,28 @@ const requestListener = function (req, res) {
           res.end(err);
           return;
     });
+  } else if (req.url.match(/\.(jpg|jpeg|png|gif)$/)) {
+    const imagePath = __dirname + "/public" + req.url;
+
+    const fileExtension = req.url.split(".").pop();
+    const mimeTypes = {
+      'jpg': 'image/jpeg',
+      'jpeg': 'image/jpeg',
+      'png': 'image/png',
+      'gif': 'image/gif'
+    };
+
+    fs.readFile(imagePath)
+      .then(contents => {
+        res.writeHead(200, {"Content-Type": mimeTypes[fileExtension]});
+        res.end(contents);
+      })
+      .catch(err => {
+        console.error("Error in serving image:", err);
+        res.writeHead(404);
+        res.end("Image not found");
+        return;
+      });
   } else {
     res.writeHead(404, {"Content-Type": "text/html"});
     res.end("Page not found");
