@@ -23,7 +23,7 @@ const requestListener = function (req, res) {
     });
 
   } else if (req.url.indexOf('.js') != -1) {
-    fs.readFile(__dirname + "/public/app.js")
+    fs.readFile(__dirname + "/public/index.js")
     .then(contents => {
       js = contents;
       res.writeHead(200, {"Content-Type": "text/javascript"});
