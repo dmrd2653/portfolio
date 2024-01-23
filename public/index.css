@@ -22,15 +22,21 @@ body {
     font-family: "Mate SC";
     display: flow;
 }
-#contact {
-    margin: 0 7rem;
+#about {
+    margin: 0px 2rem;
     padding-top: 2rem;
+    max-width: 18rem;
+    height: auto;
 }
-
+#contact {
+    margin: 0rem auto;
+    padding-top: 2rem;
+    width: fit-content;
+}
 h1 {
     font-family: "Kolker Brush";
     color: black;
-    font-size: 88px;
+    font-size: 5rem;
     text-decoration: none;
     text-align: center;
     text-shadow: 0px 2px 4px;
@@ -45,6 +51,11 @@ h3 {
     padding: 0.5rem;
     margin-top: 20rem;
 }
+img {
+    border-radius: 0.5rem;
+    max-width: 10rem;
+    height: auto;
+}
 #message-box {
     padding-bottom: 2rem;
 }
@@ -56,10 +67,9 @@ nav {
 
 #projects {
     display: flex;
-    border-radius: .5rem;
-    padding: 5px;
-    justify-content: space-evenly;}
-a {
+    justify-content: space-evenly;
+}
+.navlink {
     color: #E31D1DE0;
     border-radius: .5rem;
     background: #F6A342;
@@ -73,7 +83,14 @@ a {
 a:hover {
     background-color: lightgreen;
     text-decoration: none;
-
+}
+.project-link:hover {
+    background-color: lightgreen;
+    text-decoration: none;
+}
+.project-link {
+    padding: 0.5rem;
+    border-radius: .5rem;
 }
 .send {
     border-radius: 4px;
