@@ -23,15 +23,13 @@ body {
     display: flow;
 }
 #about {
-    margin: 0px 2rem;
-    padding-top: 2rem;
-    max-width: 18rem;
-    height: auto;
+    padding: 3rem;
+    max-width: 95%;
 }
 #contact {
     margin: 0rem auto;
-    padding-top: 2rem;
-    width: fit-content;
+    padding-top: 6rem;
+    max-width: 60%;
 }
 h1 {
     font-family: "Kolker Brush";
@@ -53,8 +51,8 @@ h3 {
 }
 img {
     border-radius: 0.5rem;
-    max-width: 10rem;
-    height: auto;
+    max-width: 95%;
+
 }
 #message-box {
     padding-bottom: 2rem;
@@ -89,8 +87,10 @@ a:hover {
     text-decoration: none;
 }
 .project-link {
-    padding: 0.5rem;
+    padding: 1.5rem;
     border-radius: .5rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 .send {
     border-radius: 4px;
