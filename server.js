@@ -1,3 +1,5 @@
+// Node w/o express
+
 const http = require('http');
 const fs = require('fs').promises;
 const host = 'localhost';
@@ -9,7 +11,7 @@ let js;
 
 const requestListener = function (req, res) {
   if (req.url.indexOf('.css') != -1) {
-    fs.readFile(__dirname + "/public/index.css")
+    fs.readFile(__dirname + "/docs/index.css")
     .then(contents => {
       css = contents;
       res.writeHead(200, {"Content-Type": "text/css"});
@@ -23,7 +25,7 @@ const requestListener = function (req, res) {
     });
 
   } else if (req.url.indexOf('.js') != -1) {
-    fs.readFile(__dirname + "/public/index.js")
+    fs.readFile(__dirname + "/docs/index.js")
     .then(contents => {
       js = contents;
       res.writeHead(200, {"Content-Type": "text/javascript"});
@@ -36,7 +38,7 @@ const requestListener = function (req, res) {
       return;
     });
   } else if (req.url === '/' || req.url.indexOf('.html') != -1) {
-    fs.readFile(__dirname + "/public/index.html")
+    fs.readFile(__dirname + "/docs/index.html")
         .then(contents => {
           html = contents;
           res.writeHead(200, {"Content-Type": "text/html"});
@@ -49,7 +51,7 @@ const requestListener = function (req, res) {
           return;
     });
   } else if (req.url.match(/\.(jpg|jpeg|png|gif)$/)) {
-    const imagePath = __dirname + "/public" + req.url;
+    const imagePath = __dirname + "/docs" + req.url;
 
     const fileExtension = req.url.split(".").pop();
     const mimeTypes = {
