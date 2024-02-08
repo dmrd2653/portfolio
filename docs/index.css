@@ -33,7 +33,6 @@ a {
 }
 a:hover {
     text-decoration: none;
-    /* background-color: #FFFFFF; */
     color: #FFFFFF;
 }
 #about {
@@ -61,6 +60,7 @@ a:hover {
     /* text-shadow: 0px 2px 4px; */
 }
 .h2-spread-effect{
+    text-align: center;
     transition: 600ms ease-in-out;
 }
 .h2-spread-effect:hover {
@@ -68,9 +68,11 @@ a:hover {
     font-variation-settings: "wght" 600; 
     letter-spacing: 1.5rem;
 }
+
 h3 {
     text-align: center;
 }
+
 .footer {
     opacity: 75%;
     text-align: center;
@@ -89,24 +91,88 @@ img {
 }
 nav {
     display: flex;
-    margin: 2rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-flow: wrap;
 }
 
 #projects {
     display: flex;
     justify-content: space-evenly;
 }
-.navlink {
+
+.nav-ripple-effect{
     transition: 700ms ease-in-out;
-    border-radius: 0.5rem;
     padding: 1rem;
-    margin: 1rem;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 3rem;
+	position:relative;
+	width: 11rem;
+	height: 3rem;
+	background-color: transparent;
+	color: white;
+	border-radius: 2px;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	display: flow;
 }
-.navlink:hover {
+
+.nav-ripple-effect:hover > .wave1 {
+    animation: ripple-1 2s infinite;
+}
+.nav-ripple-effect:hover > .wave2 {
+    animation: ripple-2 2s infinite;
+}
+.nav-ripple-effect:hover > .wave3 {
+    animation: ripple-3 2s infinite;
+}
+.wave1{
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    background-color: #FFF;
+    top: -3px;
+    left: 20px;
+    transform: scale(0);
+    border-radius: 8px;
+}
+.wave2{
+    position: absolute;
+    width: 10rem;
+    height: 4rem;
+    background-color: #FFF;
+    top: -3px;
+    left: 3px;
+    transform: scale(0);
+    border-radius: 8px;
+}
+.wave3{
+    position: absolute;
+    width: 10rem;
+    height: 4rem;
+    background-color: #FFF;
+    top: -3px;
+    left: 3px;
+    transform: scale(0);
+    border-radius: 8px;
+}
+
+
+@keyframes ripple-1 {
+    0% {transform: scale(0);}
+    20%{transform: scale(1);opacity:0.3;}
+    100%{transform: scale(1);opacity:0;}
+}
+@keyframes ripple-2 {
+    0% {transform: scale(0);}
+    20%{transform: scale(1);opacity:0.3;}
+    100%{transform: scale(1);opacity:0;}
+}
+@keyframes ripple-3 {
+    0% {transform: scale(0);}
+    20%{transform: scale(1);opacity:0.3;}
+    100%{transform: scale(1);opacity:0;}
+}
+.nav-ripple-effect:hover {
     transition: 700ms ease-in-out;
     font-variation-settings: "wght" 600; 
     letter-spacing: 8px;
