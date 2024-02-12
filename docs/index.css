@@ -41,6 +41,32 @@ a:hover {
     background-image: url("images/paper.jpeg");
     background-size: cover;
 }
+
+.reveal {
+    color: #0000;
+    background: 
+      linear-gradient(#00203FFF 0 0) no-repeat,
+      linear-gradient(black 0 0) no-repeat;
+    background-size: 0% 100%; /* we start at 0% 100% */
+    -webkit-background-clip: padding-box,text;
+            background-clip: padding-box,text;
+    animation: 
+    t 3.5s 2.5s both,
+    b 3.5s 3.6s both;
+}
+
+.clone {
+-webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+}
+
+@keyframes t{
+to {background-size: 150% 100%} 
+}
+@keyframes b {
+to {background-position:-200% 0,0 0}
+}
+
 .me {
     max-width: 25%;
 }
@@ -57,16 +83,17 @@ a:hover {
     margin: 5rem;
     text-decoration: none;
     text-align: center;
-    /* text-shadow: 0px 2px 4px; */
+    text-shadow: 0px 2px 4px;
 }
 .h2-spread-effect{
+    font-size: 3rem;
     text-align: center;
     transition: 600ms ease-in-out;
 }
 .h2-spread-effect:hover {
     transition: 600ms ease-in-out;
     font-variation-settings: "wght" 600; 
-    letter-spacing: 1.5rem;
+    letter-spacing: 3.5rem;
 }
 
 h3 {
@@ -156,7 +183,6 @@ nav {
     border-radius: 8px;
 }
 
-
 @keyframes ripple-1 {
     0% {transform: scale(0);}
     20%{transform: scale(1);opacity:0.3;}
@@ -205,15 +231,15 @@ nav {
     background-color: #FFFFFF;
     opacity: 60%;
 }
-#sub-header-mirror::after {
+/* #sub-header-mirror::after {
     content: "DM Davidson";
     display: flow;
-    /* transform: rotateX(180deg); */
     background-clip: text;
+    transform: rotateX(180deg);
     -webkit-background-clip: text;
     color: #999;
     text-align: center;
     margin: -7rem;
     transform: rotatex(180deg) translatey(5px);
     filter: blur(1px) brightness(1.5);
-}
+} */
