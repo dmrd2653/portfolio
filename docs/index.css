@@ -7,119 +7,90 @@ body {
     margin: auto;
     width: 100%;
     height: 100%;
-    background-image: url("images/world.jpeg") ;
+    background-image: url("images/bakgrd1.jpeg") ;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "Mate SC", "Fauna One", serif;
+    font-family: Georgia, serif;
     display: flow;
-    color: #00203FFF;
+    color: black;
 }
 a {
-    color: #FFFFFF;
     background-color: transparent;
     text-decoration: none;
 }
 a:hover {
     text-decoration: none;
-    color: #FFFFFF;
+    color: black;
 }
 #about {
     margin: auto;
     width: fit-content;
     padding: 2rem;
     max-width: 75%;
-    background-image: url(images/paper.jpeg);
-    background-size: cover;
 }
-
-.text-reveal {
-    color: black;
-    background: 
-      linear-gradient(#00203FFF 0 0) no-repeat,
-      linear-gradient(black 0 0) no-repeat;
-    background-size: 0% 100%; 
-    -webkit-background-clip: padding-box,text;
-            background-clip: padding-box,text;
-    animation: 
-    t 3.5s 2.5s both,
-    b 3.5s 3.6s both;
-}
-
-.text-reveal-clone {
--webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-}
-
-@keyframes t{
-to {background-size: 150% 100%} 
-}
-@keyframes b {
-to {background-position:-200% 0,0 0}
-}
-
 .profile {
     clip-path: circle(40%);
     padding: 1rem;
-    max-width: 13rem;
-    --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
-    --m:
-      left   var(--_i,0%) top    var(--_g),
-      bottom var(--_i,0%) left   var(--_g),
-      top    var(--_i,0%) right  var(--_g),
-      right  var(--_i,0%) bottom var(--_g);
-    -webkit-mask: var(--m);
-            mask: var(--m);
-    filter: grayscale();
-    transition: .3s linear;
-    cursor: pointer;
-}
+    max-width: 20rem;
 
-.profile:hover {
-    --_i: 10%;
-    filter: grayscale(0);
 }
-
 #contact {
-    margin: auto;
-    padding-top: 6rem;
-    max-width: 60%;
-    color: #FFFFFF;
+    margin: 20rem auto;
+    padding: 8rem 20rem;
+    border-radius: 2rem;
+    display: grid;
+    background-image: url(images/computer.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 59% 110%;
 }
 .sub-header {
     display: flex;
     width: fit-content;
-    font-family: "Kolker Brush", "Cinzel", sans-serif;
-    padding: 9rem 0rem;
-    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    padding: 8rem 0;
     font-size: 12rem;
     margin: auto;
     text-align: center;
-    text-shadow: 0px 2px 4px;
 }
-.h2-spread-effect{
+
+.info {
+    text-align: center;
+    padding: 6rem;
+}
+h2, h3 {
+    font-family: "Josefin Sans";
+}
+.h2-spread-effect {
     padding: 1rem;
     width: fit-content;
-    font-size: 3rem;
+    font-size: 8rem;
     transition: 600ms ease-in-out;
 }
 .h2-spread-effect:hover {
     transition: 600ms ease-in-out;
-    font-variation-settings: "wght" 600;
-    letter-spacing: 1.5rem;
+    letter-spacing: 6.5rem;
 }
 
 h3 {
     text-align: center;
+    font-size: 4rem;
+    margin: 0 0 1rem;
+    width: 0rem;
 }
 
 .footer {
-    opacity: 75%;
     text-align: center;
-    background-color: #00203FFF;
     padding: 0.5rem;
     margin-top: 10rem;
-    color: #FFFFFF;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.25rem;
 }
 #projects {
     list-style: none;
@@ -130,7 +101,7 @@ h3 {
     gap: 4rem;
 }
 .project-link {
-    --project-aspect-ratio: 4/3;
+    --project-aspect-ratio: 7/3;
 }
 
 @supports (aspect-ratio: 1) {
@@ -147,26 +118,43 @@ h3 {
     border-radius: 0.5rem;
     object-fit: cover;
     height: var(--project-height);
-    transform: scale(1) translate(0, 0);
-    transition: transform 1200ms ease-in;
 }
-.project-img:hover {
-    transform: scale(1.3) translate(-8%, -3%);
-}
-#message-box {
-    padding-bottom: 2rem;
-}
+
 nav {
     display: flex;
     justify-content: space-evenly;
     flex-flow: wrap;
 }
 p {
+    font-size: 3rem;
     text-wrap: balance;
     padding: 1rem;
     margin: auto;
 }
+.about-me {
+    text-wrap: balance;
+    padding: 1rem;
+    margin: auto;
+    background-image: url("images/birds.jpeg") ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tech-list {
+    font-family: "Josefin Sans", sans-serif;
+}
+.three-steps {
+    background-image: url(images/pyramid.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-block: 14rem;
+}
 
+#email {
+    font-size: 1.5rem;
+    margin: 0rem
+}
 .nav-ripple-effect{
     transition: 700ms ease-in-out;
     padding: 1rem;
@@ -175,7 +163,7 @@ p {
 	width: 11rem;
 	height: 3rem;
 	background-color: transparent;
-	color: white;
+	color: black;
 	border-radius: 2px;
 	text-decoration: none;
 	text-align: center;
@@ -184,19 +172,19 @@ p {
 }
 
 .nav-ripple-effect:hover > .wave1 {
-    animation: ripple-1 2s infinite;
+    animation: ripple-1 2s infinite ease-in;
 }
 .nav-ripple-effect:hover > .wave2 {
-    animation: ripple-2 2s infinite;
+    animation: ripple-2 2s infinite ease-in;
 }
 .nav-ripple-effect:hover > .wave3 {
-    animation: ripple-3 2s infinite;
+    animation: ripple-3 2s infinite ease-in;
 }
 .wave1{
     position: absolute;
     width: 8rem;
     height: 4rem;
-    background-color: #FFF;
+    background-color: black;
     top: -3px;
     left: 20px;
     transform: scale(0);
@@ -206,7 +194,7 @@ p {
     position: absolute;
     width: 10rem;
     height: 4rem;
-    background-color: #FFF;
+    background-color: black;
     top: -3px;
     left: 3px;
     transform: scale(0);
@@ -216,7 +204,7 @@ p {
     position: absolute;
     width: 10rem;
     height: 4rem;
-    background-color: #FFF;
+    background-color: black;
     top: -3px;
     left: 3px;
     transform: scale(0);
@@ -244,16 +232,22 @@ p {
     letter-spacing: 8px;
 }
 
-.send {
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    color: #00203FFF;
-    border: none;
-    cursor: pointer;
+#copy-btn {
+    width: 10rem;
+    padding: 0.25rem 0;
+    border: 2px solid rgba(0,0,0,.09);
+    color: white;
+    background: black;
+    border-radius: 0.5rem;
+    transition: 300ms ease;
+    display: flow;
 }
-.send:hover {
-    background-color: #FFFFFF;
-    opacity: 60%;
+
+#copy-btn:hover {
+    border-color: rgba(0,0,0,.3);
+    background: grey;
+    color: white;
+    opacity: 100%;
 }
 
 /* Mobile phones */
@@ -273,6 +267,9 @@ p {
     }
     #projects {
         justify-content: center;
+    }
+    #contact {
+        display: block;
     }
 } 
 
