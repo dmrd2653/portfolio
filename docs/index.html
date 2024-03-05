@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daniel Davidson: Freelance Designer & Developer">
+    <meta name="description" content="Daniel Davidson: Freelance Web Designer & Developer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Daniel-Davidson-Web-Developer-Front-End</title>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,7 +20,7 @@
             const myEmail = document.getElementById('email').innerHTML;
             const copyBtn = document.getElementById('copy-btn');
             navigator.clipboard.writeText(myEmail);
-            copyBtn.innerHTML = 'Copied';
+            copyBtn.innerHTML = 'Copied!';
         }
     </script>
 </head>
@@ -53,57 +50,74 @@
     </header>
     <main>
         <section id="projects">
-            <a class="project-link" href="https://voyager-travel-2b6989c1a264.herokuapp.com/">
-                <div class="blurred-img" src="images/solo-project-Small.jpeg">
-                    <img class="project-img" src="images/solo-project.png" alt="solo-project" loading="lazy">
-                </div>
-            </a>
-            <a class="project-link" href="https://my-group-project-c388448b6f62.herokuapp.com/">
-                <div class="blurred-img" src="images/group-project-Small.jpeg">
-                    <img class="project-img" src="images/group-project.png" alt="group-project" loading="lazy">
-                </div>
-            </a>
-        </section>
-        <section id="tech-list">
-            <h2>technologies</h2>
-            <div class="scroller">
-                <ul class="tag-list scroller-inner">
-                    <li>React</li>
-                    <li>GitHub</li>
-                    <li>Git</li>
-                    <li>Heroku</li>
-                    <li>Figma</li>
-                    <li>Material  UI</li>
-                    <li>JavaScript</li>
-                    <li>CSS</li>
-                    <li>HTML5</li>
-                </ul>
+            <h2 class="title-projects">PROJECTS</h2>
+            <div class="project-list">
+                <a class="project-link" href="https://voyager-travel-2b6989c1a264.herokuapp.com/">
+                    <div class="blurred-img" src="images/solo-project-Small.jpeg">
+                        <img class="project-img" src="images/solo-project.png" alt="solo-project" loading="lazy">
+                    </div>
+                </a>
+                <a class="project-link" href="https://my-group-project-c388448b6f62.herokuapp.com/">
+                    <div class="blurred-img" src="images/group-project-Small.jpeg">
+                        <img class="project-img" src="images/group-project.png" alt="group-project" loading="lazy">
+                    </div>
+                </a>
             </div>
         </section>
         <section id="about">
-            <h2>ABOUT ME</h2>
+            <h3 class="title-about">ABOUT ME</h2>
+            <p class="about-me">
+                I am passionate about web design technologies
+                which provide impressive user-friendly experiences. 
+                With an introvert's temperament and an artistic eye,
+                sensitivity to details matters to me. This empowers me
+                to create aesthetically modern interfaces - both professional 
+                and stunning.</p>
+                <br>
                 <p class="about-me">
-                    I am passionate about web design technologies
-                    which provide impressive user-friendly experiences. 
-                    With an introvert's temperament and an artistic eye,
-                    sensitivity to details matters to me. This empowers me
-                    to create aesthetically modern interfaces - both professional 
-                    and stunning.
-                    <br> 
-                When not creating web projects, I am exploring current and new web technologies 
-                in depth.
+                    When not creating web projects, I am exploring current and new web technologies 
+                    in depth.
                 </p>
                 <img class="profile" src="images/me.jpg" alt="profile-pic">
-
+                
                 <p class="three-steps">I enjoy creating cutting-edge solutions from:
                     Design -> Code -> Implementation.
                     <br>
                     <br>
                     Your vision becoming reality.
                 </p>
-        </section>
-        <section id="contact">
-            <h3>Want to work together?</h3>
+            </section>
+            <section id="tech-list">
+                <h4 class="title-tech">TECHNOLOGIES</h2>
+                <div class="scroller">
+                    <ul class="tag-list scroller-inner">
+                        <li>Heroku</li>
+                        <li>Figma</li>
+                        <li>Material  UI</li>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>HTML5</li>
+                        <li>React</li>
+                        <li>GitHub</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="scroller" data-direction="right">
+                    <ul class="tag-list scroller-inner">
+                        <li>Heroku</li>
+                        <li>Figma</li>
+                        <li>Material  UI</li>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>HTML5</li>
+                        <li>React</li>
+                        <li>GitHub</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="contact">
+                <h5>Want to work together?</h3>
             <p id="email">dmrdavidson@outlook.com</p>
             <button id="copy-btn" onclick="copyEmail()">Copy Email</button>
         </section>

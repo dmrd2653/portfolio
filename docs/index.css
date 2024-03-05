@@ -8,18 +8,19 @@ body {
     margin: auto;
     width: 100%;
     height: 100%;
-
     font-family: Georgia, serif;
     display: flow;
     color: black;
 }
 
-header, #projects {
+header,
+#projects {
     background-image: url(images/bakgrd1.jpeg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 200%;    
+    background-size: 100% 200%;
 }
+
 a {
     font-size: 1.5rem;
 }
@@ -27,210 +28,6 @@ a {
 a:hover {
     text-decoration: none;
     color: black;
-}
-
-.tag-list {
-    margin: 0;
-    padding-inline: 0;
-    list-style-type: none;
-    font-size: 2rem;
-    padding-block: 9rem;
-    width: max-content;
-}
-
-.tag-list li {
-    border-radius: .5rem;
-    padding: 1rem;
-    box-shadow: 0 0.5rem 1rem -1.25rem (rgb(153, 90, 90)38, 120, 120);
-}
-
-.scroller {
-    max-width: 600px;
-    outline: 3px solid lime;
-}
-
-.scroller-inner {
-    padding-block: 1rem;
-    display: flex;
-    gap: 2rem;
-}
-
-.scroller[data-animated="true"] {
-    overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, blue 20%, blue 80% transparent);
-    mask: linear-gradient(90deg, transparent, blue 20%, blue 80% transparent);
-}
-
-.scroller[data-animated="true"] .scroller-inner {
-    flex-wrap: nowrap;
-}
-
-#about {
-    background-image: url(images/birds.jpeg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 115%;
-    border-radius: 2rem;
-    margin: auto;
-    max-width: 75%;    
-    padding: 2rem 0 0;
-    filter: blur(20px);
-    opacity: 0;
-    animation: fade-in-text linear forwards;
-    animation-timeline: view();
-    animation-range: entry 100px;
-}
-@keyframes fade-in-text {
-    40% { filter: blur(8px);
-        opacity: .50; }
-
-    50% { filter: blur(3px);
-        opacity: .75; }
-
-    100% { filter: blur(0);
-        opacity: 1; }
-}
-.profile {
-    clip-path: circle(40%);
-    padding: 1rem;
-    max-width: 20rem;
-    margin: auto auto 10rem 45rem;
-}
-
-#contact {
-    margin: 7rem 24rem;
-    padding: 8rem 5rem;
-    border-radius: 2rem;
-    background-image: url(images/computer.jpeg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50% 110%;
-}
-
-.sub-header {
-    display: flex;
-    width: fit-content;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    padding: 3rem 0;
-    font-size: 12rem;
-    margin: auto;
-    text-align: center;
-}
-
-.info {
-    text-align: center;
-    padding: 6rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 200;
-}
-
-h2 {
-    padding: 1rem;
-    width: fit-content;
-    font-size: 8rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-}
-
-h3 {
-    text-align: center;
-    font-size: 5rem;
-    margin: 0 0 1rem;
-    width: 0rem;
-    color: dimgray;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-}
-
-.footer {
-    text-align: center;
-    padding: 0.5rem;
-    margin-top: 10rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 1.25rem;
-}
-/* For image animation upon scroll */
-@media (prefers-reduced-motion: no-preference) {
-    img {
-        scale: .8; opacity: 0;
-        animation: fade-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry 75px;
-    }
-    
-    @keyframes fade-in {
-        to {scale: 1; opacity: 1;}
-    }
-}
-
-#projects {
-    list-style: none;
-    padding-top: 3rem;
-    padding-inline: 8rem;
-    margin: 0 auto 6rem;
-    display: grid;
-    background-color: white;
-    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
-    gap: 4rem;
-}
-
-.project-link {
-    --project-aspect-ratio: 7/3;
-}
-
-@supports (aspect-ratio: 1) {
-
-    .project-link,
-    .project-img {
-        aspect-ratio: var(--project-aspect-ratio);
-        /* Remove height to prevent distorting aspect-ratio */
-        height: auto;
-    }
-}
-.blurred-img {
-    border-radius: 2rem;
-}
-
-
-.project-img {
-    display: block;
-    width: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    height: var(--project-height);
-}
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-}
-
-p {
-    font-size: 2rem;
-    text-wrap: balance;
-    padding: 1rem;
-    margin: auto;
-}
-
-.about-me {
-    text-wrap: balance;
-    padding: 1rem;
-    margin: auto;
-}
-
-
-.three-steps {
-    padding: 7rem;
-}
-
-#email {
-    font-size: 1.5rem;
-    margin: 0rem
 }
 
 .nav-ripple-effect {
@@ -263,7 +60,7 @@ p {
 
 .wave1 {
     position: absolute;
-    width: 8rem;
+    width: 10rem;
     height: 4rem;
     background-color: black;
     top: -3px;
@@ -274,7 +71,7 @@ p {
 
 .wave2 {
     position: absolute;
-    width: 10rem;
+    width: 12.5rem;
     height: 4rem;
     background-color: black;
     top: -3px;
@@ -285,7 +82,7 @@ p {
 
 .wave3 {
     position: absolute;
-    width: 10rem;
+    width: 12.25rem;
     height: 4rem;
     background-color: black;
     top: -3px;
@@ -347,9 +144,244 @@ p {
     letter-spacing: 8px;
 }
 
+.sub-header {
+    display: flex;
+    width: fit-content;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding: 3rem 0;
+    font-size: 12rem;
+    margin: auto;
+    text-align: center;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, black, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation:
+        reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+
+}
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 6px;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 24px #008B8B;
+    }
+}
+
+.info {
+    text-align: center;
+    padding: 6rem 6rem 12rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+}
+
+/* For image animation upon scroll */
+@media (prefers-reduced-motion: no-preference) {
+    img {
+        scale: .8;
+        opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 100px;
+    }
+
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+}
+
+.project-list {
+    list-style: none;
+    padding-top: 3rem;
+    padding-inline: 8rem;
+    margin: 0 auto 6rem;
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    gap: 4rem;
+}
+
+.project-link {
+    --project-aspect-ratio: 7/3;
+}
+
+@supports (aspect-ratio: 1) {
+
+    .project-link,
+    .project-img {
+        aspect-ratio: var(--project-aspect-ratio);
+        /* Remove height to prevent distorting aspect-ratio */
+        height: auto;
+    }
+}
+
+.blurred-img {
+    border-radius: 2rem;
+}
+
+
+.project-img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    height: var(--project-height);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+.tag-list {
+    margin-inline: 11rem;
+    padding-inline: 0;
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+.tag-list li {
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: #008B8B;
+    color: white;
+}
+
+.scroller {
+    max-width: max-content;
+    margin-inline: 8rem;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+}
+
+.scroller-inner {
+    padding-block: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.scroller .scroller-inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scrolling linear;
+    animation-timeline: scroll(root);
+}
+
+.scroller[data-direction="right"] .scroller-inner {
+    margin-left: 10rem;
+    animation-direction: reverse;
+}
+
+@keyframes scrolling {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+#about {
+    background-image: url(images/birds.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 115%;
+    border-radius: 2rem;
+    margin: auto;
+    max-width: 75%;
+    padding: 2rem 0 0;
+}
+
+.title-tech {
+    margin-inline: 10rem;
+}
+
+.title-projects,
+.title-about,
+.about-me,
+.three-steps,
+.title-tech {
+    filter: blur(20px);
+    opacity: 0;
+    animation: fade-in-text linear forwards;
+    animation-timeline: view();
+    animation-range: entry 1rem;
+}
+
+@keyframes fade-in-text {
+
+    50% {
+        filter: blur(36px);
+        opacity: .50;
+    }
+
+    60% {
+        filter: blur(24px);
+        opacity: .75;
+    }
+
+    80% {
+        filter: blur(12px);
+        opacity: .85;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.profile {
+    clip-path: circle(40%);
+    padding-inline: 3rem;
+    max-width: 18rem;
+    margin: auto auto 10rem 41rem;
+}
+
+#contact {
+    margin: 7rem 24rem;
+    padding: 8rem 5rem;
+    border-radius: 2rem;
+    background-image: url(images/computer.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 110%;
+}
+
+#email {
+    font-size: 1.5rem;
+    margin: 0rem;
+    padding: 1rem 1rem 1rem 0;
+}
+
 #copy-btn {
     width: 10rem;
     padding: 0.25rem 0;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
     border: 2px solid rgba(0, 0, 0, .09);
     color: white;
     background: black;
@@ -363,6 +395,63 @@ p {
     background: grey;
     color: white;
     opacity: 100%;
+}
+
+.footer {
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 10rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+h2 {
+    margin: 0 6rem;
+    padding: 1rem;
+    width: fit-content;
+    font-size: 8rem;
+    background: transparent;
+}
+
+h3 {
+    padding: 0 7rem;
+    width: fit-content;
+    font-size: 7rem;
+}
+
+h4 {
+    padding: 1rem;
+    width: fit-content;
+    font-size: 6rem;
+}
+
+h5 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 0 0 1rem;
+    width: 0rem;
+    color: dimgray;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-size: 2rem;
+    text-wrap: balance;
+    padding-inline: 7rem;
+    margin: auto;
+}
+
+.three-steps {
+    padding-bottom: 7rem;
 }
 
 /* Mobile phones */
