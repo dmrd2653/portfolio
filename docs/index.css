@@ -1,5 +1,5 @@
 html {
-    min-width: 100svw;
+    max-width: 100svw;
     /* min-height: 100svh; */
     scroll-behavior: smooth;
 }
@@ -456,6 +456,10 @@ p {
 
 /* Mobile phones */
 @media (max-width: 48rem) {
+    header, #projects {
+        background-size: 200% 150%;
+        background-position-x: center;
+    }
     .sub-header {
             font-size: 5rem;
     }
@@ -513,8 +517,16 @@ p {
 
 /* Tablets and small desktops */
 @media (min-width: 48rem) and (max-width: 75rem) {
-    
-
+    html {
+        min-width: 140svw;
+    }
+    .profile {
+        margin: auto auto 10rem 30rem;
+    }
+    #contact {
+        margin: 7rem 16rem;
+        background-size: 85% 100%;
+    }
 }
 
 /* Larger desktop screens */
