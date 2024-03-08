@@ -471,8 +471,44 @@ p {
         font-size: 1rem;
         padding-inline: 2rem;
     }
+    a {
+        font-size: 1rem;
+    }
+    nav {
+        flex-wrap: nowrap;
+    }
+    .nav-ripple-effect {
+        padding-inline: 1.5rem;
+        margin-block: 3rem;
+        margin-inline: 0;
+        padding-block: 0;
+    }
+    .nav-ripple-effect:hover {
+        letter-spacing: 3px;
+    }
+    .wave1 {
+        width: 6rem;
+        height: 3rem;
+        top: -13px;
+        left: 12px;
+    }
+    .wave2 {
+        width: 8rem;
+        height: 3rem;
+        top: -13px;
+        left: 10px;
+    }
+    .wave3 {
+        width: 8rem;
+        height: 3rem;
+        top: -13px;
+        left: 8px;
+    }
     .project-list {
         padding-inline: 3rem;
+    }
+    #about {
+        background-size: 164% 115%;
     }
     .title-about {
         padding: 0 2rem;
